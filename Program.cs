@@ -19,9 +19,9 @@ var host = new HostBuilder()
         builder.AddFilter<ApplicationInsightsLoggerProvider>("Microsoft", LogLevel.Error);
         
         builder // <-- optional - set a console logger
-            // .AddSystemdConsole() <-- alternative console logger
-            .AddConsole(console => console.FormatterName = "plain") // <-- custom logger - just for fun
-            .AddConsoleFormatter<PlainConsoleFormatter, PlainConsoleFormatterOptions>() // <-- custom logger - just for fun
+            .AddSystemdConsole()
+            // .AddConsole(console => console.FormatterName = "plain") // <-- custom logger - just for fun
+            // .AddConsoleFormatter<PlainConsoleFormatter, PlainConsoleFormatterOptions>() // <-- custom logger - just for fun
             ;
         
     })
